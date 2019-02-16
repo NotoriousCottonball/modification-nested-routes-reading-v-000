@@ -21,7 +21,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = Post.new(author_id: params[:author_id])
     @post.save
     redirect_to post_path(@post)
   end
