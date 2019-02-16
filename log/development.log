@@ -3881,3 +3881,7 @@ Processing by PostsController#new as HTML
   Rendered posts/_form.html.erb (22.9ms)
   Rendered posts/new.html.erb within layouts/application (27.4ms)
 Completed 200 OK in 50ms (Views: 43.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/authors/4" for 70.170.70.9 at 2019-02-16 16:14:39 +0000
+Cannot render console from 70.170.70.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
