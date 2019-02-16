@@ -2,6 +2,8 @@
   <%= f.hidden_field :author_id %>
   <label>Post title:</label><br>
   <% if @post.author.nil? %>
+    <%= f.select :author_id, options_from_collection_for_select(Author.all, :id, :name) %><br>
+  <% end %>
   <%= f.text_field :title %><br>
 
   <label>Post Description</label><br>
