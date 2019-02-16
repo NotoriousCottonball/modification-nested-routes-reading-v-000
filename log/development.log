@@ -4067,3 +4067,22 @@ Processing by PostsController#new as HTML
   Rendered posts/_form.html.erb (38.6ms)
   Rendered posts/new.html.erb within layouts/application (48.2ms)
 Completed 200 OK in 70ms (Views: 67.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/posts" for 70.170.70.9 at 2019-02-16 16:48:37 +0000
+Cannot render console from 70.170.70.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iSbeKA9pxPrKtjgaQ9+js0No+lF8YyyJp+t0WW7vgzfFoRA8hg1JD9iIuUIIiyUPw/bsSvr7NhCKXivLY93klg==", "post"=>{"author_id"=>"7", "title"=>"Hello Title ", "description"=>"Hello Description"}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+NoMethodError (undefined method `titlecase' for nil:NilClass):
+  app/models/post.rb:29:in `make_title_case'
+  app/controllers/posts_controller.rb:29:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.9ms)
