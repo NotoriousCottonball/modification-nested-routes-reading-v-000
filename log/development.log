@@ -4058,3 +4058,12 @@ Processing by PostsController#index as HTML
   [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 9]]
   Rendered posts/index.html.erb within layouts/application (50.9ms)
 Completed 200 OK in 262ms (Views: 232.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/new" for 70.170.70.9 at 2019-02-16 16:48:13 +0000
+Cannot render console from 70.170.70.9! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered posts/_form.html.erb (38.6ms)
+  Rendered posts/new.html.erb within layouts/application (48.2ms)
+Completed 200 OK in 70ms (Views: 67.5ms | ActiveRecord: 0.2ms)
