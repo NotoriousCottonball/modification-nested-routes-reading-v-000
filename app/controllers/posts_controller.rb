@@ -28,8 +28,6 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.save
     redirect_to post_path(@post)
-    @post.save
-    redirect_to post_path(@post)
   end
 
   def update
